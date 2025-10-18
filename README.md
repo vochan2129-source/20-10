@@ -1,2 +1,246 @@
-# 20-10
-hẹ 
+ <!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chúc mừng 20/10</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: url('https://i.ibb.co/YB3pMWMd/h-nh-jpg.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5); /* phủ mờ ảnh nền */
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      padding: 40px;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      color: #fff;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .emoji {
+      font-size: 2rem;
+      margin-top: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Mobile friendly */
+   /* @media (max-width: 480px) {
+      .card {
+        padding: 30px 20px;
+      }
+
+      .card h1 {
+        font-size: 1.8rem;
+      }
+
+      .card p {
+        font-size: 1rem;
+      }
+
+      .emoji {
+        font-size: 1.8rem;
+      }
+.cute-img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .cute-img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Chim dễ thương hai bên */
+   .side-img {
+  position: absolute;
+  width: 120px; /* tăng size */
+  top: -40px;
+  animation: swing 2s ease-in-out infinite;
+}
+
+.left-img {
+  left: -80px;
+  transform-origin: bottom right;
+}
+
+.right-img {
+  right: -80px;
+  transform-origin: bottom left;
+  animation-delay: 1s;
+}
+
+    @keyframes swing {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    /* Hoa và tim rơi */
+    .petal, .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      animation: fall 8s linear infinite;
+      z-index: 0;
+    }
+.center-gif {
+  width: 180px;
+  margin-top: 10px;
+  animation: jump 1.5s ease-in-out infinite;
+}
+
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+    .petal {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+    }
+
+    .heart {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-40px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="overlay"></div>
+
+  <div class="card" onclick="showNextWish()">
+ <div><iframe width="300" height="60" src="https://vocaroo.com/embed/1111pD4COpaC?autoplay=0" frameborder="0" allow="autoplay"></iframe><br><a href="https://voca.ro/1111pD4COpaC" title="Vocaroo Voice Recorder" target="_blank">View on Vocaroo &gt;&gt;</a></div>
+    <!-- Chim cute hai bên -->
+    <img src="https://i.ibb.co/tMsbbM81/a52b0a5fb7bc9af638d06daf73b81736.gif" class="side-img left-img" alt="cute left" />
+    <img src="https://i.ibb.co/tMsbbM81/a52b0a5fb7bc9af638d06daf73b81736.gif" class="side-img right-img" alt="cute right" />
+
+    <h1>🎉 Chúc Mừng 20/10 💐</h1>
+<p id="wish-text">
+สวัสดี
+안녕하세요
+こんにちは
+你好
+HELLO
+AND
+</p>
+    <div class="emoji">🌸🌷🌟</div>
+   <img  src="https://i.ibb.co/M5KSnZXw/b7c64aca651271c52087f58276bd1de1.gif" class="center-gif" alt= "cute center" />
+
+   </div>
+  <script>
+  const count = 30;
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement('div');
+    const isHeart = Math.random() < 0.4;
+    el.classList.add(isHeart ? 'heart' : 'petal');
+
+    // Tránh giữa màn hình (giữ hoa rơi ở hai bên)
+    const leftPos = Math.random();
+    const offset = leftPos < 0.5
+      ? Math.random() * 20    // 0% - 20% (bên trái)
+      : 80 + Math.random() * 20; // 80% - 100% (bên phải)
+
+    el.style.left = offset + 'vw';
+    el.style.top = '0'; // ✅ Bắt đầu từ đỉnh màn hình
+
+    el.style.position = 'fixed';
+    el.style.zIndex = '0';
+    el.style.animationDuration = (6 + Math.random() * 5) + 's';
+    el.style.animationDelay = (Math.random() * 5) + 's';
+    el.style.width = el.style.height = (15 + Math.random() * 10) + 'px';
+    document.body.appendChild(el);
+  }
+</script>
+
+  <script>
+    const wishes = [
+      "XIN CHÀO TẤT CẢ CÁC CÁC CHÚ BÁO LẦU 3 ĐANG XEM CÁI XÀM ",
+      "Ai biết hôm nay là ngày gì không?",
+      "À quên, để sẵn ở trên rồi...hẹ hẹ",
+      "SAO! THẤY CÁI NÀY CUTE HÔNG?",
+      "Làm muốn rớt con mắt ra ngoài luôn đó!",
+      "Thôi xàm đủ rồi, vào việc chính",
+      "Hôm nay, đại diện những con nhái của LẦU TAM 333333 TAI",
+      "Em xin chân thành chúc các Chị/Em LẦU BAR thật nhiều niềm vui, hạnh phúc, luôn luôn đáng yêu, vui vẻ và tràn đầy năng lượng tích cực  💕",
+ "Rồi hết câu chuyện ời đó, mọi người đi làm việc tiếp đi"
+    ];
+  let currentIndex = 0;
+    function showNextWish() {
+      const wishText = document.getElementById("wish-text");
+           wishText.style.opacity = 0;
+      setTimeout(() => {
+        wishText.innerHTML = wishes[currentIndex];
+        wishText.style.opacity = 1;
+    currentIndex = (currentIndex + 1) % wishes.length;
+      }, 300);
+    }
+  </script>
+    </div>
+</body>
+</html>
